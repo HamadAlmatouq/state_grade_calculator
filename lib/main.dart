@@ -21,8 +21,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final textController = TextEditingController();
+  //to store result and then print it
   String result = "";
 
+  //To return grade based on the score
   String calculateGrade(double score) {
     if (score >= 90) {
       return "A";
@@ -56,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               Container(
+                //Text field with hint text to type score
                 padding: EdgeInsets.all(60),
                 child: TextField(
                   controller: textController,
@@ -67,6 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Container(
+                //elevated button when pressed displays grade with a letter
                 padding: EdgeInsets.only(bottom: 30),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -89,6 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              // Displays grade
               Text(
                 result,
                 style: TextStyle(
