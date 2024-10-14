@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   //to store result and then print it
   String result = "";
 
-  //To return grade based on the score
+  //A funcation that uses if to convert entered double to string letters ex A,B,C,D
   String calculateGrade(double score) {
     if (score >= 90) {
       return "A";
